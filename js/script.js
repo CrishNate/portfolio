@@ -13,7 +13,7 @@ jQuery("document").ready(function($) {
 });
 
 var $page = $('html, body');
-$('a[href*="#portfolio"],a[href*="#skills"],a[href*="#featured"]').click(function() {
+$('a[href*="#portfolio"],a[href*="#skills"],a[href*="#featured"],a[href*="#footer"]').click(function() {
     $page.animate({
         scrollTop: $($.attr(this, 'href')).offset().top
     }, 400);
