@@ -3,7 +3,7 @@ jQuery("document").ready(function($) {
     var nav = $('.header');
 
     $(window).scroll(function() {
-        if ($(this).scrollTop() > 136) {
+        if ($(this).scrollTop() > 0) {
             nav.addClass("header__active");
         } else {
             nav.removeClass("header__active");
