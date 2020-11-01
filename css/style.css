@@ -151,6 +151,15 @@ body.lock {
   z-index: 99;
   padding: 30px 0;
   background-position: 10% -100%;
+  background-image: url("../img/header/logo.png");
+  background-repeat: no-repeat;
+  background-size: 350px auto;
+  background-position: 5% 50%;
+  padding: 27.5px 0;
+  -webkit-transition: all 0.6s ease 0s;
+  -o-transition: all 0.6s ease 0s;
+  transition: all 0.6s ease 0s;
+
 }
 
 .header__active {
@@ -201,7 +210,7 @@ body.lock {
           align-items: flex-end;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          justify-content: flex-end;
 }
 
 .header__logo img {
@@ -231,7 +240,7 @@ body.lock {
   font-weight: 700;
   text-transform: uppercase;
   white-space: nowrap;
-  padding: 5px;
+  padding: 10px;
   color: #787878;
 }
 
@@ -298,7 +307,6 @@ body.lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  cursor: pointer;
   margin: 0 0 5px 0;
 }
 
@@ -306,7 +314,7 @@ body.lock {
   margin: 0 7px 0 0;
   background-color: #253d4a;
   color: #fff;
-  padding: 3px;
+  padding: 5px;
 }
 
 /*BACKGROUND===========================================================================================*/
@@ -518,16 +526,21 @@ body.lock {
   margin: 20px 0;
 }
 
-.contact__text span {
-	font-weight: bold;
+.contact__text span a {
+  color: #000;
+  font-weight: bold;
 }
 
 .contact__links {
-  padding: 0 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-transform: uppercase;
+  text-align: left;
+}
+
+.contact__links img{
+  width: 40px;
+}
+
+.contact__links a{
+  margin: 0 15px;
 }
 
 .contact__link {
@@ -538,7 +551,7 @@ body.lock {
 
 .link {
   color: #000;
-  padding: 4px;
+  padding: 8px;
   cursor: pointer;
 }
 
@@ -601,20 +614,6 @@ body.lock {
 }
 
 @media (max-width: 767px) {
-  .header {
-    background-image: url("../img/header/logo.png");
-    background-repeat: no-repeat;
-    background-size: 230px auto;
-    background-position: 10% 50%;
-    padding: 25px 0;
-    -webkit-transition: all 0.6s ease 0s;
-    -o-transition: all 0.6s ease 0s;
-    transition: all 0.6s ease 0s;
-  }
-
-  .header img {
-    display: none;
-  }
 
   .header__burger {
     display: block;
