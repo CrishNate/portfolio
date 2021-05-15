@@ -188,7 +188,7 @@
     }
 }
 
-@media (max-width: 900px) and (max-width: 767px) {
+@media (max-width: 900px) and (max-width: 900px) {
     .menu__body._active:after {
         height: 60px;
     }
@@ -397,13 +397,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .after--work {
-    top: 13%;
+    top: 15%;
 }
 
 .after--personal {
     width: 310px;
     left: -259px;
-    top: 17%;
+    top: 26%;
 }
 
 @media (max-width: 767px) {
@@ -444,6 +444,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .sm-after--proj {
     left: 6px;
+}
+
+@media (max-width: 767px) {
+    .sm-after--proj {
+        left: 0;
+    }
 }
 
 .page {
@@ -617,10 +623,6 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
 }
 
-.card-skills .table__skill__one {
-    width: 100%;
-}
-
 @media (max-width: 500px) {
     .card-skills .table__skill {
         padding-right: 3px;
@@ -631,8 +633,10 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     padding-left: 15px;
     text-align: left;
-    max-width: 150px;
+    min-width: 124px;
     overflow: hidden;
+    color: #366796;
+    font-weight: 700;
 }
 
 @media (max-width: 500px) {
@@ -720,6 +724,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-work__image img {
     width: 100%;
+    border-radius: 20px;
 }
 
 .card-work__skills {
@@ -736,6 +741,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #d9d9d9;
     color: #a6a6a6;
     padding: 5px 9px;
+    border-radius: 7px;
 }
 
 .card-work__date {
@@ -779,7 +785,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact__info a {
-    color: #000;
+    color: #366796;
 }
 
 .contact__action {
@@ -840,6 +846,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .video {
     height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
 
 @media (max-width: 767px) {
@@ -868,6 +876,28 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.video__text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.video__text-body {
+    position: absolute;
+    width: 100%;
+    left: 5%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.video__text-body svg {
+    fill: #fff;
+}
+
 input:checked,
 input:checked + * {
     background-color: #1F2E37;
@@ -891,20 +921,30 @@ input:checked .page:after, input:checked .page:before,
 
 input:checked .card-work__skills span,
   input:checked + * .card-work__skills span {
-    background-color: #313131;
+    background-color: #162027;
     color: #bfbfbf;
 }
 
 input:checked .header,
   input:checked + * .header {
-    background-color: #272727;
+    background-color: #1F2E37;
 }
 
-input:checked .menu__link, input:checked .contact__info a, input:checked .card-work__title,
+input:checked .menu__link, input:checked .card-work__title,
   input:checked + * .menu__link,
-  input:checked + * .contact__info a,
   input:checked + * .card-work__title {
     color: #fff;
+}
+
+input:checked .menu__body,
+  input:checked + * .menu__body {
+    background-color: #1F2E37;
+}
+
+input:checked .contact__info a, input:checked .table__lvl,
+  input:checked + * .contact__info a,
+  input:checked + * .table__lvl {
+    color: #72b7f9;
 }
 
 input:checked .header__logo svg,
@@ -935,13 +975,18 @@ input:checked .menu__body._active,
 
 input:checked .menu__body:after,
   input:checked + * .menu__body:after {
-    background-color: #272727;
+    background-color: #1F2E37;
     background-image: url("../images/logo-dark.svg");
 }
 
 input:checked .link:after,
   input:checked + * .link:after {
     background-color: #fff;
+}
+
+input:checked .link--contact:after,
+  input:checked + * .link--contact:after {
+    background: #366796;
 }
 
 input:checked .contact__action svg,
@@ -993,18 +1038,23 @@ input[type="checkbox"]:checked {
 }
 
 .link:after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     width: 0;
     height: 2px;
-    background: #253E56;
-    transition: width .4s ease;
+    background: #494949;
+    transition: width .3s ease;
+    overflow: hidden;
 }
 
 .link:hover:after {
     width: 100%;
+}
+
+.link--contact:after {
+    background: #366796;
 }
 
 /*FONTS========================*/
